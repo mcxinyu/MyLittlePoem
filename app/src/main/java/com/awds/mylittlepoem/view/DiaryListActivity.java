@@ -47,6 +47,7 @@ public class DiaryListActivity extends BaseActivity implements DiaryListAdapter.
         setContentView(R.layout.activity_diary_list);
         //需要获取component并且调用inject()方法。
         MyApplication.getAppComponent().inject(this);
+
         mDiaryListRecyclerView.setHasFixedSize(true);
         mDiaryListRecyclerView.setLayoutManager(
                 new LinearLayoutManager(
@@ -106,7 +107,7 @@ public class DiaryListActivity extends BaseActivity implements DiaryListAdapter.
                                 });
                     }
                 })
-                .setNegativeButton(R.string.cancel, null)
+                .setNegativeButton(R.string.no, null)
                 .create()
                 .show();
     }

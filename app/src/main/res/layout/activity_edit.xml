@@ -11,6 +11,7 @@
         android:id="@+id/edit_title"
         android:layout_marginTop="@dimen/margin_18"
         android:maxLines="1"
+        android:hint="@string/input_title_hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <ScrollView
@@ -23,6 +24,7 @@
         <EditText
             android:id="@+id/edit_content"
             android:gravity="top"
+            android:hint="@string/input_content_hint"
             android:paddingBottom="@dimen/margin_40"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
