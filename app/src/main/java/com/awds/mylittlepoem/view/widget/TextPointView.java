@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.awds.mylittlepoem.R;
 import com.awds.mylittlepoem.view.util.DisplayUtil;
+import com.awds.mylittlepoem.view.widget.font.FontFamilyFactory;
 
 /**
  * 自定义小园按钮
@@ -67,6 +68,7 @@ public class TextPointView extends FrameLayout {
         textView = new TextView(mContext);
         textView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.CENTER));
+        textView.setTypeface(FontFamilyFactory.getTypeface());
         textView.setTextSize(textSize);
         textView.setTextColor(ContextCompat.getColor(mContext, R.color.white));
         textView.setText(singleText);
