@@ -6,6 +6,10 @@
     <dimen name="contain_red_circle_size">40dp</dimen>
     <dimen name="contain_red_circle_size_x2">80dp</dimen>
     <dimen name="margin_18">18dp</dimen>
-    <dimen name="normal_text_size">18dp</dimen>
+    <dimen name="normal_text_size">18sp</dimen>
     <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_64">64dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="huge_text_size">28sp</dimen>
 </resources>

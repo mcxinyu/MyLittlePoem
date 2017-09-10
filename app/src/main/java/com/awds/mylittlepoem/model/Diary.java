@@ -90,12 +90,12 @@ public class Diary extends BaseModel{
     }
 
     public String getYearMonthChinese() {
-        mDateManager = new FullDateManager();
+        mDateManager = new FullDateManager(time_created);
         return mDateManager.getYearMonthChineseDate();
     }
 
     public String getCatalogueTitle() {
-        mDateManager = new FullDateManager();
+        mDateManager = new FullDateManager(time_created);
         return mDateManager.getDayChineseDate() + "  " + getTitle();
     }
 }

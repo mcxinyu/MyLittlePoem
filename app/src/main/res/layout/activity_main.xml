@@ -28,6 +28,8 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="8dp"
             android:layout_width="@dimen/contain_red_circle_size"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -57,6 +59,8 @@
                 android:layout_width="@dimen/contain_red_circle_size"
                 android:layout_height="match_parent">
                 <LinearLayout
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="8dp"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">

@@ -5,7 +5,13 @@
         <attr name="redPointViewBgColor" format="color"/>
         <attr name="textSize" format="dimension"/>
     </declare-styleable>
+
     <declare-styleable name="VerticalTextView">
         <attr name="verticalTextSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="MultipleRowTextView">
+        <attr name="multipleRowTextSize" format="dimension"/>
+        <attr name="multipleRowTextBold" format="boolean"/>
     </declare-styleable>
 </resources>

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -55,8 +56,9 @@ public class EditActivity extends BaseActivity {
     private String originTitle, originContent;
     private boolean unChanged = true;
 
-    public static Intent createIntent(Context context) {
+    public static Intent createIntent(Context context, @Nullable String diaryUuid) {
         Intent intent = new Intent(context, EditActivity.class);
+        intent.putExtra(DIARY_UUID, diaryUuid);
         return intent;
     }
 
@@ -146,12 +148,19 @@ public class EditActivity extends BaseActivity {
     }
 
     private void saveDiary() {
-        if (TextUtils.isEmpty(mEditContent.getText()) || TextUtils.isEmpty(mEditTitle.getText())){
+        if (TextUtils.isEmpty(mEditContent.getText())){
             Toast.makeText(this, R.string.edit_content_no_null, Toast.LENGTH_SHORT).show();
             return;
         }
-        String titleString = mEditTitle.getText().toString();
-        String contentString = mEditContent.getText().toString();
+        String titleString;
+        String contentString;
+        if (TextUtils.isEmpty(mEditTitle.getText())){
+            titleString = mEditContent.getText().toString();
+            contentString = mEditContent.getText().toString();
+        } else {
+            titleString = mEditTitle.getText().toString();
+            contentString = mEditContent.getText().toString();
+        }
 
         if (mDiary == null){
             mDiary = new Diary();

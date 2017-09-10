@@ -1,12 +1,38 @@
 package com.awds.mylittlepoem.view.util;
 
 import android.content.Context;
+import android.content.res.Resources;
 
 /**
  * Created by huangyuefeng on 2016/12/12.
  */
 
 public class DisplayUtil {
+    public static int getDisplayWidth() {
+        return Resources.getSystem().getDisplayMetrics().widthPixels;
+    }
+
+    /**
+     * Transfer sp to px in order keep font size the same
+     * @param context
+     * @param spValue
+     * @return
+     */
+    public static int sp2px(Context context, float spValue) {
+        final float scaledDensity = context.getResources().getDisplayMetrics().scaledDensity;
+        return (int) (spValue * scaledDensity + 0.5f);
+    }
+
+    /**
+     * Transfer px to sp in order keep font size the same
+     * @param context
+     * @param pxValue
+     * @return
+     */
+    public static int px2sp(Context context, float pxValue) {
+        final float scaledDensity = context.getResources().getDisplayMetrics().scaledDensity;
+        return (int) (pxValue / scaledDensity + 0.5f);
+    }
 
     /**
      * 将 dip 转换为 px

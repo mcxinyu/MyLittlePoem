@@ -79,7 +79,7 @@ public class DiaryListActivity extends BaseActivity implements DiaryListAdapter.
 
     @OnClick(R.id.view_write)
     public void onClick() {
-        startActivity(EditActivity.createIntent(this));
+        startActivity(EditActivity.createIntent(this, null));
     }
 
     @Override
@@ -97,7 +97,7 @@ public class DiaryListActivity extends BaseActivity implements DiaryListAdapter.
                         diary.setTime_removed(DateUtil.getCurrentTimeStamp());
                         mDiaryService.saveDiary(diary)
                                 .subscribeOn(Schedulers.io())
-                                .subscribeOn(AndroidSchedulers.mainThread())
+                                .observeOn(AndroidSchedulers.mainThread())
                                 .subscribe(new Action1<Void>() {
                                     @Override
                                     public void call(Void aVoid) {

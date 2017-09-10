@@ -12,4 +12,8 @@
     <string name="input_title_hint">标题不用太长</string>
     <string name="input_content_hint">内容不能为空空空</string>
     <string name="want_to_save">是否保存修改？</string>
+    <string name="edit">辑</string>
+    <string name="share">享</string>
+    <string name="space_of_date_record_end">"  "</string>
+    <string name="record">记</string>
 </resources>

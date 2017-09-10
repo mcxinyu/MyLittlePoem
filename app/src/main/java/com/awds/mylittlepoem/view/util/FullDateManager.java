@@ -39,7 +39,7 @@ public class FullDateManager {
         DateTime dateTime = new DateTime(dateSeconds * 1000);
         year = dateTime.getYear();
         month = dateTime.getMonthOfYear();
-        day = dateTime.getDayOfYear();
+        day = dateTime.getDayOfMonth();
     }
 
     public FullDateManager(int year, int month, int day) {

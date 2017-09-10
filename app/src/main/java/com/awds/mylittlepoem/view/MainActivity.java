@@ -98,7 +98,7 @@ public class MainActivity extends BaseActivity {
                 startActivityForResult(settingIntent, REQUEST_CODE_SETTING);
                 break;
             case R.id.write:
-                Intent writeIntent = EditActivity.createIntent(this);
+                Intent writeIntent = EditActivity.createIntent(this, null);
                 startActivity(writeIntent);
                 break;
             case R.id.read:
